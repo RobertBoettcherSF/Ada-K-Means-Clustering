@@ -59,22 +59,22 @@ yield different local optima.
 
 - k-means is closely related to the **expectation–maximization (EM)**
   algorithm for **Gaussian mixture models (GMM)**: both iteratively refine
-  cluster centers.  Soft EM/GMM allows anisotropic Gaussians; hard k-means
+  cluster centers. Soft EM/GMM allows anisotropic Gaussians; hard k-means
   tends to find clusters of comparable spatial extent.
 - **k-means++** (Arthur & Vassilvitskii 2007) improves *initialization* via
-  D² sampling (\(O(\log k)\)-competitive in expectation) then runs the same
+  $D^2$ sampling ($O(\log k)$-competitive in expectation) then runs the same
   Lloyd loop — see sibling **Ada-K-Means-Plus-Plus**.
 
 ## Project overview
 
 | Concern | Approach | Notes |
 | --- | --- | --- |
-| **Metric** | Euclidean \(L_2\) / squared \(L_2\) | `Distance`, `Squared_Distance` |
+| **Metric** | Euclidean ($L_2$) / squared ($L_2$) | `Distance`, `Squared_Distance` |
 | **Iteration** | Assign → centroid update | Lloyd / naïve k-means |
 | **Empty cluster** | Keep previous mean + mark | `Empty_Flags` |
 | **Init** | Forgy (seeded LCG), spaced indices, user indices | `Init_Centers_*` |
-| **Stop** | \(\max_i\|m_i'-m_i\|<\mathrm{Tol}\) or stable labels | or `Max_Iters` |
-| **Quality** | WCSS / SSE / inertia | \(\sum_i\|x_i-\mu_{\ell_i}\|^2\) |
+| **Stop** | $\max_i \Vert m_i'-m_i \Vert < \mathrm{Tol}$ or stable labels | or `Max_Iters` |
+| **Quality** | WCSS / SSE / inertia | $\sum_i \Vert x_i - \mu_{\ell_i} \Vert^2$ |
 
 ## Public API
 
