@@ -83,7 +83,7 @@ yield different local optima.
 | Caps | `Max_Points`, `Max_Dims`, `Max_K` | Fixed educational limits |
 | Types | `Real`, `Point`, `Dataset`, `Centers`, `Labels`, `Empty_Flags`, `Index_List`, `Parameters`, `Result` | Domain model |
 | RNG | `RNG_State`, `Seed_RNG`, `Draw_Unit`, `Draw_Index` | 32-bit LCG for Forgy |
-| Geometry | `Distance`, `Squared_Distance`, `Extract_Point`, `Extract_Center` | \(L_2\) helpers |
+| Geometry | `Distance`, `Squared_Distance`, `Extract_Point`, `Extract_Center` | $L_2$ helpers |
 | Partition | `Nearest_Center`, `Assign_Labels` | Voronoi of the sample |
 | Update | `Compute_Centroids` | Means; empty → keep + mark |
 | Quality | `Within_Cluster_SSE` / `WCSS` / `Inertia` | SSE alias triple |
