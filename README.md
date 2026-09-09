@@ -19,13 +19,15 @@ Part of the **RobertBoettcherSF** Ada algorithm series.  Sibling packages
 
 ## Objective (WCSS / inertia)
 
-Given observations \(\mathbf{x}_1,\ldots,\mathbf{x}_n \in \mathbb{R}^d\),
-k-means seeks a partition \(S=\{S_1,\ldots,S_k\}\) minimizing the
+Given observations $\mathbf{x}_1,\ldots,\mathbf{x}_n \in \mathbb{R}^d$,
+k-means seeks a partition $S=\{S_1,\ldots,S_k\}$ minimizing the
 **within-cluster sum of squares (WCSS)**:
 
-\[
+$$
 \arg\min_S \sum_{i=1}^{k}\sum_{\mathbf{x}\in S_i}\|\mathbf{x}-\boldsymbol{\mu}_i\|^2
-\]
+$$
+
+where $\boldsymbol{\mu}_i$ is the mean of points in $S_i$. WCSS is also called inertia or within-cluster SSE.
 
 where \(\boldsymbol{\mu}_i\) is the mean of points in \(S_i\).  WCSS is also
 called **inertia** or within-cluster SSE.
