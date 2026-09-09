@@ -43,10 +43,10 @@ The classic iterative refinement (Stuart P. Lloyd, Bell Labs 1957 / published
 1982; often called **Lloyd’s algorithm** or the **Forgy** method when started
 from random data points) is:
 
-1. Given initial means \(m_1,\ldots,m_k\).
-2. **Assignment:** assign each \(\mathbf{x}\) to the nearest mean
+1. Given initial means $m_1,\ldots,m_k$.
+2. **Assignment:** assign each $\mathbf{x}$ to the nearest mean
    (by **squared** Euclidean distance) — a Voronoi partition of the sample.
-3. **Update:** set \(m_i \leftarrow\) mean of points assigned to \(i\).
+3. **Update:** set $m_i \leftarrow$ mean of points assigned to $i$.
    Empty cluster policy in this package: **keep** the previous mean and mark
    `Empty(i) := True`.
 4. Repeat until means move less than `Tol`, assignments are stable, or
