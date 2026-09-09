@@ -3,7 +3,7 @@
 Educational, self-contained Ada 2023 package for
 [Wikipedia: k-means clustering](https://en.wikipedia.org/wiki/K-means_clustering):
 **k-means clustering**, a method of **vector quantization** originally from
-**signal processing**, that partitions \(n\) observations into \(k\) clusters
+**signal processing**, that partitions $n$ observations into $k$ clusters
 in which each observation belongs to the cluster with the nearest **mean**
 (cluster center / centroid).  The resulting partition of the data space is a
 set of **Voronoi cells**.
@@ -29,7 +29,7 @@ $$
 
 where $\boldsymbol{\mu}_i$ is the mean of points in $S_i$. WCSS is also called inertia or within-cluster SSE.
 
-where \(\boldsymbol{\mu}_i\) is the mean of points in \(S_i\).  WCSS is also
+where $\boldsymbol{\mu}_i$ is the mean of points in $S_i$.  WCSS is also
 called **inertia** or within-cluster SSE.
 
 **Squared Euclidean caveat:** k-means minimizes *squared* Euclidean distances
